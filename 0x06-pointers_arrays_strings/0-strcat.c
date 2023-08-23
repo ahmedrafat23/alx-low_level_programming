@@ -13,19 +13,19 @@ Returns a pointer to the resulting string dest
 char *_strcat(char *dest, char *src) {
     char *ptr = dest;
     
-    // Move the pointer to the end of dest
+// Move the pointer to the end of dest
     while (*ptr != '\0') {
         ptr++;
     }
     
-    // Append src to dest
+// Append src to dest
     while (*src != '\0') {
         *ptr = *src;
         ptr++;
         src++;
     }
     
-    // Add the terminating null byte
+// Add the terminating null byte
     *ptr = '\0';
     
     return dest;
