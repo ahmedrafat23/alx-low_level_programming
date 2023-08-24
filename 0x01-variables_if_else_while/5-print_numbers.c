@@ -1,22 +1,24 @@
-include <stdio.h>
+#include <stdio.h>
 
 /**
  * main - entry point
  *
- * Description: print all single digit numbers
+ * Description: Prints all single digit numbers.
  *
- * Return: Alwyas 0 (success)
+ * Return: Always 0 (success)
  */
 
 int main(void)
 {
-	int main(void)
+	int digit = 0;
 
 	while (digit <= 9)
 	{
-		print("%i", digit);
-		digit++;
+	printf("%i", digit);
+	digit++;
 	}
-	printf("\n")
 
-	return
+	printf("\n");
+
+	return 0;
+}
