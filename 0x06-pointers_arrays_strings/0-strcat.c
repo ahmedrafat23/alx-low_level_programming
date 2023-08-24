@@ -13,14 +13,14 @@ char *_strcat(char *dest, char *src)
 
 	while (*ptr != '\0')
 	{
-		ptr++;
+	ptr++;
 	}
 
 	while (*src != '\0')
 	{
-		*ptr = *src;
-		ptr++;
-		src++;
+	*ptr = *src;
+	ptr++;
+	src++;
 	}
 
 	*ptr = '\0';
