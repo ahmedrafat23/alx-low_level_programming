@@ -1,20 +1,24 @@
 #include <stdio.h>
+
 /**
  * main - entry point
  *
- * description: print all aplhabet letters
+ * Description: Prints all alphabet letters.
  *
- * return: Always 0 (success)
+ * Return: Always 0 (success)
  */
 
 int main(void)
 {
 	char ch = 'a';
+
 	while (ch <= 'z')
 	{
-		putchar(ch);
-		ch++;
+	putchar(ch);
+	ch++;
 	}
+
 	putchar('\n');
 
 	return (0);
+}
