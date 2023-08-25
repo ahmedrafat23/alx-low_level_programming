@@ -8,7 +8,6 @@
  *
  * Return: Always 0 (success)
  */
-
 int main(void)
 {
 	int digit1 = 0;
@@ -33,7 +32,7 @@ int main(void)
 
 	if (digit1 + digit2 + digit3 != 24)
 	{
-	putchar(',');
+        putchar(',');
 	putchar(' ');
 	}
 	}
@@ -43,6 +42,8 @@ int main(void)
 	}
 	digit1++;
 	}
+
 	putchar('\n');
+
 	return (0);
-} 
+}
