@@ -17,6 +17,8 @@ int main(void)
 	digit2 = 0;
 	while (digit2 <= 9)
 	{
+	if (digit1 != digit2 && digit1 < digit2)
+{
 	putchar(digit1 + '0');
 	putchar(digit2 + '0');
 
@@ -24,6 +26,7 @@ int main(void)
 	{
 	putchar(',');
 	putchar(' ');
+	}
 	}
 	digit2++;
 	}
