@@ -42,22 +42,22 @@
 char *cap_string(char *s)
 {
 	char *ptr = s;
-	int founDLimit = 1;
+	int founDelimit = 1;
 
 	while (*s)
 	{
 	if (isDelimiter(*s))
 	{
-	founDLimit = 1;
+	founDelimit = 1;
 	}
-	else if (isLower(*s) && founDLimit)
+	else if (isLower(*s) && founDelimit)
 	{
 	*s -= 32;
-	founDLimit = 0;
+	founDelimit = 0;
 	}
 	else
 	{
-	founDLimit = 0;
+	founDelimit = 0;
 	}
 	s++;
 	}
