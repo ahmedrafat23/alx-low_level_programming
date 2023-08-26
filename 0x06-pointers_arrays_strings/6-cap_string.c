@@ -2,29 +2,33 @@
 #include <stdio.h>
 
 /**
- * islower - determines whether ascii islowercase
- * 0c: character
+ * islower - determines whether a character is lowercase.
+ * @c: character
+ *
  * Return: 1 if true, 0 if false
  */
-
 int islower(char c)
 {
-	return (c >= 97 && c <= 122);
+	return (c >= 'a' && c <= 122);
 }
 
 /**
- * isDelimiter - determines whether ascii is a delimiter
- * 0c: character
+ * isDelimiter - determines whether a character is a delimiter.
+ * @c: character
+ *
  * Return: 1 if true, 0 if false
  */
-
-int isDlimiter(char c)
+int isDelimiter(char c)
 {
-	int i;
 	char delimiter[] = " \t\n,.!?\"(){}";
+	int i;
 
 	for (i = 0; i < 12; i++)
-		if (c == delimiter[i])
-			return (1);
+	{
+	if (c == delimiter[i])
+	{
+	return (1);
+	}
+	}
 	return (0);
 }
