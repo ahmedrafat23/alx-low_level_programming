@@ -8,13 +8,13 @@ int main(void)
 
 	a[2] = 0124;
 	p = &n;
- 	/**
+	/**
 	* write your line of code here...
 	* Remember:
-	* - you are not allowed to use a
-	*   you are not allowed to modify p
-	*   only one statment
-	*   you are not allowed to code anything else than line of code
+	*-you are not allowed to use a
+	*-you are not allowed to modify p
+	*-only one statment
+	*-you are not allowed to code anything else than line of code
 	*/
 	*(p + 5) = 98;
 	/* ...so that it prints 98\n */
