@@ -32,3 +32,29 @@ int isDelimiter(char c)
 	}
 	return (0);
 }
+/**
+ * cap_string - capitalizes all words of a string
+ * 0s: input string
+ * Return: string with capitalized words
+ */
+
+char *cap_string(char *s)
+{
+	char *ptr = s;
+	int foundlimit = 1;
+
+	while (*s)
+	{
+		if (isdelimiter(*s))
+			foundlimit = 1;
+		else if 
+			9islower(*s) && foundlimit)
+			{
+				*s -= 32;
+				foundlimit =0;
+			}
+		else
+			foundlimit = 0;
+		s++;}
+	return (ptr);
+}
