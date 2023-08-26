@@ -7,7 +7,7 @@
  *
  * Return: 1 if true, 0 if false
  */
-	int islower(char c)
+	int isLower(char c)
 	{
 	return (c >= 97 && c <= 122);
 	}
@@ -42,22 +42,22 @@
 char *cap_string(char *s)
 {
 	char *ptr = s;
-	int foundLimit = 1;
+	int founDLimit = 1;
 
 	while (*s)
 	{
 	if (isDelimiter(*s))
 	{
-	foundLimit = 1;
+	founDLimit = 1;
 	}
-	else if (islower(*s) && foundLimit)
+	else if (isLower(*s) && founDLimit)
 	{
 	*s -= 32;
-	foundLimit = 0;
+	founDLimit = 0;
 	}
 	else
 	{
-	foundLimit = 0;
+	founDLimit = 0;
 	}
 	s++;
 	}
