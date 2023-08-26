@@ -7,10 +7,10 @@
  *
  * Return: 1 if true, 0 if false
  */
-int islower(char c)
-{
-	return (c >= 'a' && c <= 122);
-}
+	int islower(char c)
+	{
+	return (c >= 97 && c <= 122);
+	}
 
 /**
  * isDelimiter - determines whether a character is a delimiter.
@@ -18,8 +18,8 @@ int islower(char c)
  *
  * Return: 1 if true, 0 if false
  */
-int isDelimiter(char c)
-{
+	int isDelimiter(char c)
+	{
 	char delimiter[] = " \t\n,.!?\"(){}";
 	int i;
 
@@ -32,29 +32,34 @@ int isDelimiter(char c)
 	}
 	return (0);
 }
+
 /**
  * cap_string - capitalizes all words of a string
- * 0s: input string
+ * @s: input string
+ *
  * Return: string with capitalized words
  */
-
 char *cap_string(char *s)
 {
 	char *ptr = s;
-	int foundlimit = 1;
+	int foundLimit = 1;
 
 	while (*s)
 	{
-		if (isdelimiter(*s))
-			foundlimit = 1;
-		else if 
-			9islower(*s) && foundlimit)
-			{
-				*s -= 32;
-				foundlimit =0;
-			}
-		else
-			foundlimit = 0;
-		s++;}
+	if (isDelimiter(*s))
+	{
+	foundLimit = 1;
+	}
+	else if (islower(*s) && foundLimit)
+	{
+	*s -= 32;
+	foundLimit = 0;
+	}
+	else
+	{
+	foundLimit = 0;
+	}
+	s++;
+	}
 	return (ptr);
 }
