@@ -4,16 +4,15 @@
  * main - Entry point
  *
  * Description: prints the sum of even-valued
- *		Ffibonacci sequence not exceed
- *		4million
+ *              Fibonacci sequence not exceeding
+ *              4 million
  *
  * Return: Always 0 (success)
  */
-
 int main(void)
 {
-	unsigned long fibl = 0, fib2 = 1, sum;
-	float total_sum;
+	unsigned long fib1 = 0, fib2 = 1, sum;
+	float total_sum = 0;
 
 	while (1)
 	{
@@ -27,6 +26,7 @@ int main(void)
 		fib1 = fib2;
 		fib2 = sum;
 	}
+
 	printf("%.0f\n", total_sum);
 
 	return (0);
