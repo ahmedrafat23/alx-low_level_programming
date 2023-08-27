@@ -39,14 +39,8 @@ int main(void)
 	for (count = 1; count <= 98; count++)
 	{
 		if (f10 > 0)
-			printf("%lu", 0);
-		initial0s = numlength(mx) - 1 - numlength(f1);
-		
-		while (f10 > 0 && initial0s > 0)
-		{
-		printf("%d", 0);
-		initial10s--;
-		}
+			printf("%d", 0);
+		initial0s--;
 
 		printf("%lu", f1);
 
