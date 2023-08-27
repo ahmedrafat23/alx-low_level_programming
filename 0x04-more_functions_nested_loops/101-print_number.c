@@ -1,23 +1,31 @@
 #include "main.h"
 
 /**
- * print_number - prints an integer>
+ * print_number - prints an integer
  *
  * @n: The integer to be printed.
  */
 void print_number(int n)
 {
-	unsigned int num = n;
+	unsigned int num;
 
-	/* first check its negative */
+	/* Handle negative numbers */
 	if (n < 0)
 	{
-		_putchar('-');
-		num -num;
+	_putchar('-');
+	num = -n;
+	}
+	else
+	{
+	num = n;
 	}
 
-	/* print the first few digits */
-	if ((num / 10) > 0)
-		print_number((num / 10) + 48);
+	/* Print the digits recursively */
+	if (num / 10 > 0)
+	{
+	print_number(num / 10);
+	}
+
+	_putchar(num % 10 + '0');
 }
 
