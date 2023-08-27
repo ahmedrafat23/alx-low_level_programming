@@ -2,23 +2,24 @@
 
 /**
  * rev_string - reverses a string
- *
  * @s: string parameter input
+ *
+ * Return: void
  */
-
 void rev_string(char *s)
 {
-	int l, i,
-	    char temp;
+	int length = 0, i;
+	char temp;
 
-	/* find string length without null char*/
-	for (l = 0; s[l] != '\0'; ++l)
+	/* find string length without null char */
+	while (s[length] != '\0')
+		length++;
 
-		/*swap the string by looping to half the string*/
-		for (i = 0; i < 1 / 2; i++)
-		{
-			temp = s[i];
-			s[i] = s[l -1 - i]; /* -1 because the array starts from 0 */
-			s[l - 1 - i] = tmp;
-		}
+	/* swap the string by looping to half the string */
+	for (i = 0; i < length / 2; i++)
+	{
+		temp = s[i];
+		s[i] = s[length - 1 - i]; /* -1 because the array starts from 0 */
+		s[length - 1 - i] = temp;
+	}
 }
