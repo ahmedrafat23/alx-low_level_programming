@@ -2,13 +2,12 @@
 
 /**
  * _abs - function that computes the absolute
- *		value of the integer
+ *        value of the integer
  *
- * @n: takes in ineger type input for function
+ * @n: takes in integer type input for function
  *
- * Rteurn: Always 0 (success)
+ * Return: Absolute value of n
  */
-
 int _abs(int n)
 {
 	if (n < 0)
