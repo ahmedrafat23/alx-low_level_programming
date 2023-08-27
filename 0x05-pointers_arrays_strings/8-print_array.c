@@ -1,14 +1,12 @@
 #include "main.h"
 
 /**
- * print_array - prints n elements of an array of inegers.
+ * print_array - prints n elements of an array of integers.
+ * @a: pointer to the array
+ * @n: number of elements to print
  *
- * @n: elements parameter input
- * @n: string parameter input
- *
- * Reteurn: Nothing
+ * Return: void
  */
-
 void print_array(int *a, int n)
 {
 	int i;
@@ -20,5 +18,5 @@ void print_array(int *a, int n)
 		else
 			printf("%d", a[i]);
 	}
-	print("\n");
+	printf("\n");
 }
