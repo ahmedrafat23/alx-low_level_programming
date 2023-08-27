@@ -3,8 +3,7 @@
 /**
  * main - Entry point
  *
- * Description: Print all possible different
- *              combinations of three digits.
+ * Description: Prints all possible different combinations of three digits.
  *
  * Return: Always 0 (success)
  */
@@ -32,7 +31,7 @@ int main(void)
 
 	if (digit1 + digit2 + digit3 != 24)
 	{
-        putchar(',');
+	putchar(',');
 	putchar(' ');
 	}
 	}
