@@ -10,11 +10,11 @@
 int square(int n, int val);
 int _sqrt_recursion(int n)
 {
-	return ( square(n, 1));
+	return (square(n, 1));
 }
 
 /**
- * squatre - find square root
+ * square - find square root
  * @n: int to find square root
  * @val: square root
  * Return: int
