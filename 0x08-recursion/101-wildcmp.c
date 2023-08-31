@@ -17,11 +17,10 @@ char *move_past_star(char *s2)
 /**
  * inception - makes magic a reality
  * @s1: the first string
- * @s2: the second string, can contain wild card
+ * @s2: the second string, can contain wildcard
  *
  * Return: 1 if identical, 0 if false
  */
-
 int inception(char *s1, char *s2)
 {
 	int ret = 0;
@@ -41,9 +40,7 @@ int inception(char *s1, char *s2)
  *
  * Return: 1 if identical, 0 if false
  */
-
 int wildcmp(char *s1, char *s2)
-
 {
 	int ret = 0;
 
@@ -55,7 +52,7 @@ int wildcmp(char *s1, char *s2)
 			return (1);
 		return (wildcmp(s1 + 1, *s2 == '*' ? s2 : s2 + 1));
 	}
-	if (!*s1 || !s2)
+	if (!*s1 || !*s2)
 		return (0);
 	if (*s2 == '*')
 	{
