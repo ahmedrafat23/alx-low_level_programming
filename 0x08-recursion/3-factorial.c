@@ -6,7 +6,7 @@
  * Return: int
  */
 
-int factorial(unt n)
+int factorial(int n)
 {
 
 	if (n < 0)
