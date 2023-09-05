@@ -15,20 +15,21 @@ char *_strdup(char *str)
 	if (str == NULL)
 		return (NULL);
 
-	while (str[size] != '\0')
-		size++;
+	for (str[size] != '\0'; size++)
+		;
 
 	/* +1 on the size puts the end of string character */
-	m = malloc((size + 1) * sizeof(*str));
+	m = malloc(size * sizeof(*str) + 1);
 
-	if (m == NULL)
+	if (m == 0)
+	{
 		return (NULL);
+	}
 	else
 	{
 		for (; i < size; i++)
 			m[i] = str[i];
 	}
 
-	m[i] = '\0'; /* Add the null-terminating character */
 	return (m);
 }
