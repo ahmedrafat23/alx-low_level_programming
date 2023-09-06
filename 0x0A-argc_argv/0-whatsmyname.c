@@ -1,9 +1,9 @@
-#include "main.h"
+#include <stdio.h>
 
 /**
  * main - prints program name, followed by a new line
  * @argc: int
- * @ardv: list
+ * @argv: list
  * Return: 0
  */
 
