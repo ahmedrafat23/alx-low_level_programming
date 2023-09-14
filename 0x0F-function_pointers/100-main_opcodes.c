@@ -20,7 +20,7 @@ int main(int argc, char **argv)
 	if (b < 0)
 		printf("Error\n"), exit(2);
 
-	|while (b--)
+	| while (b--)
 		printf("%02hhx%s", *p++, b ? " " : "\n");
 	return (0);
 }
