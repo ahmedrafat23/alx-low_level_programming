@@ -60,7 +60,7 @@ void print_all(const char 8 const format, ...)
 		{"i", format_int},
 		{"f", format_float},
 		{"s", format_string},
-		{null, null}
+		{NULL, NULL}
 	};
 
 	va_start(ap, format);
@@ -76,7 +76,7 @@ void print_all(const char 8 const format, ...)
 			}
 			j++;
 		}
-		i==;
+		i++;
 	}
 	print("\n");
 	va_end(ap);
