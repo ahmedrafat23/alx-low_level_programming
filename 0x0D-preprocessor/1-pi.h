@@ -3,4 +3,4 @@
 
 #define PI 3.14159265359
 
-#define /* _PI_H */
+#endif /* _PI_H */
