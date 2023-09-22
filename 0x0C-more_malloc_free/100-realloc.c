@@ -1,49 +1,50 @@
+#include <stdlib.h>
 #include "main.h"
 
 /**
- * _realloc - allocates a memory block using malloc and free.
- * @ptr: pointer to memory allocated with malloc(old_size).
- * @old_size: size in bytes of the allocated space for ptr.
- * @new_size: size in bytes of the new memory block.
+ * *_realloc - reallocates a memory block using malloc and free
+ * @ptr: pointer to the memory previsouly allocated by malloc
+ * @old_size: size of the allocated memory for ptr
+ * @new_size: new size of the new memory block
  *
- * Return: NULL if new_size = 0 and ptr is not NULL.
+ * Return: pointer to the newly allocated memory block
  */
 void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 {
-void *p;
+	char *ptr1;
+	char *old_ptr;
 	unsigned int i;
 
 	if (new_size == old_size)
-	return (ptr);
-	if (new_size == 0 && ptr != NULL)
+		return (ptr);
+
+	if (new_size == 0 && ptr)
 	{
-	free(ptr);
-	return (NULL);
+		free(ptr);
+		return (NULL);
 	}
-	if (ptr == NULL)
+
+	if (!ptr)
+		return (malloc(new_size));
+
+	ptr1 = malloc(new_size);
+	if (!ptr1)
+		return (NULL);
+
+	old_ptr = ptr;
+
+	if (new_size < old_size)
 	{
-	p = malloc(new_size);
-	if (p == NULL)
-	return (NULL);
-	return (p);
+		for (i = 0; i < new_size; i++)
+			ptr1[i] = old_ptr[i];
 	}
+
 	if (new_size > old_size)
 	{
-	p = malloc(new_size);
-	if (p == NULL)
-	return (NULL);
-	for (i = 0; i < old_size; i++)
-	*((char *)p + i) = *((char *)ptr + i);
-	free(ptr);
+		for (i = 0; i < old_size; i++)
+			ptr1[i] = old_ptr[i];
 	}
-	else
-	{
-	p = malloc(new_size);
-	if (p == NULL)
-	return (NULL);
-	for (i = 0; i < new_size; i++)
-	*((char *)p + i) = *((char *)ptr + i);
+
 	free(ptr);
-	}
-	return (p);
+	return (ptr1);
 }
